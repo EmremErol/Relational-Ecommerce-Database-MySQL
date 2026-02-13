@@ -1,7 +1,8 @@
-DROP DATABASE IF EXISTS ETRADE3;
 CREATE DATABASE ETRADE3;
 USE ETRADE3;
 
+
+-- 1) USERS
 
 CREATE TABLE USERS (
   ID           INT AUTO_INCREMENT PRIMARY KEY,
@@ -16,72 +17,171 @@ CREATE TABLE USERS (
   TELNR2       VARCHAR(20)
 );
 
+INSERT INTO USERS (USERNAME, PASSWORD_, NAMESURNAME, EMAIL, GENDER, BIRTHDATE, CREATEDDATE, TELNR1, TELNR2) VALUES
+('emre.kaya','Ek_145','Emre Kaya','emre.kaya@gmail.com','M','1998-04-12','2026-02-10 09:12:45','05324560001','05414560001'),
+('aylin.demir','Ad_298','Aylin Demir','aylin.demir@hotmail.com','F','1996-07-21','2026-02-10 10:18:33','05324560002','05414560002'),
+('burak.celik','Bc_741','Burak Çelik','burak.celik@gmail.com','M','1994-01-05','2026-02-10 11:05:12','05324560003','05414560003'),
+('zeynep.arslan','Za_852','Zeynep Arslan','zeynep.arslan@mail.com','F','1997-03-18','2026-02-10 12:44:27','05324560004','05414560004'),
+('mehmet.turan','Mt_963','Mehmet Turan','mehmet.turan@gmail.com','M','1993-11-09','2026-02-10 13:22:10','05324560005','05414560005'),
+('elif.yildiz','Ey_357','Elif Yıldız','elif.yildiz@hotmail.com','F','1999-06-25','2026-02-10 14:30:55','05324560006','05414560006'),
+('oguzhan.kurt','Ok_456','Oğuzhan Kurt','oguzhan.kurt@gmail.com','M','1995-02-14','2026-02-10 15:48:09','05324560007','05414560007'),
+('melis.sahin','Ms_159','Melis Şahin','melis.sahin@mail.com','F','1992-12-01','2026-02-10 16:12:41','05324560008','05414560008'),
+('can.berk','Cb_753','Can Berk','can.berk@gmail.com','M','1991-08-08','2026-02-10 17:25:36','05324560009','05414560009'),
+('seda.kilic','Sk_951','Seda Kılıç','seda.kilic@hotmail.com','F','1998-10-30','2026-02-10 18:39:18','05324560010','05414560010'),
+('ahmet.oz','Ao_741','Ahmet Öz','ahmet.oz@gmail.com','M','1990-05-19','2026-02-11 09:05:22','05324560011','05414560011'),
+('gizem.cetin','Gc_852','Gizem Çetin','gizem.cetin@mail.com','F','1997-09-09','2026-02-11 10:16:37','05324560012','05414560012'),
+('furkan.kara','Fk_963','Furkan Kara','furkan.kara@gmail.com','M','1996-04-03','2026-02-11 11:28:44','05324560013','05414560013'),
+('selin.ozdemir','So_147','Selin Özdemir','selin.ozdemir@hotmail.com','F','1995-01-27','2026-02-11 12:41:52','05324560014','05414560014'),
+('baris.aydin','Ba_258','Barış Aydın','baris.aydin@gmail.com','M','1993-06-16','2026-02-11 13:53:13','05324560015','05414560015'),
+('eda.tas','Et_369','Eda Taş','eda.tas@mail.com','F','1994-07-07','2026-02-11 14:09:25','05324560016','05414560016'),
+('kemal.sari','Ks_789','Kemal Sarı','kemal.sari@gmail.com','M','1992-02-20','2026-02-11 15:14:39','05324560017','05414560017'),
+('deniz.yilmaz','Dy_951','Deniz Yılmaz','deniz.yilmaz@hotmail.com','F','1998-03-03','2026-02-11 16:29:47','05324560018','05414560018'),
+('tolga.ipek','Ti_357','Tolga İpek','tolga.ipek@gmail.com','M','1991-11-11','2026-02-11 17:45:58','05324560019','05414560019'),
+('buse.alkan','Ba_654','Buse Alkan','buse.alkan@mail.com','F','1999-12-24','2026-02-11 18:58:20','05324560020','05414560020'),
+('umut.gunes','Ug_123','Umut Güneş','umut.gunes@gmail.com','M','1990-09-17','2026-02-12 09:11:15','05324560021','05414560021'),
+('hilal.er','He_234','Hilal Er','hilal.er@hotmail.com','F','1996-02-08','2026-02-12 10:23:34','05324560022','05414560022'),
+('serkan.ulu','Su_345','Serkan Ulu','serkan.ulu@gmail.com','M','1995-05-22','2026-02-12 11:37:49','05324560023','05414560023'),
+('asli.kose','Ak_456','Aslı Köse','asli.kose@mail.com','F','1997-07-13','2026-02-12 12:48:58','05324560024','05414560024'),
+('mert.kaplan','Mk_567','Mert Kaplan','mert.kaplan@gmail.com','M','1994-10-01','2026-02-12 13:59:11','05324560025','05414560025'),
+('naz.ates','Na_678','Naz Ateş','naz.ates@hotmail.com','F','1998-06-06','2026-02-12 14:15:27','05324560026','05414560026'),
+('kaan.dogan','Kd_789','Kaan Doğan','kaan.dogan@gmail.com','M','1993-08-19','2026-02-12 15:27:33','05324560027','05414560027'),
+('irem.pol','Ip_890','İrem Pol','irem.pol@mail.com','F','1992-04-14','2026-02-12 16:42:40','05324560028','05414560028'),
+('levent.bay','Lb_901','Levent Bay','levent.bay@gmail.com','M','1991-01-09','2026-02-12 17:53:56','05324560029','05414560029'),
+('ceren.tek','Ct_012','Ceren Tek','ceren.tek@hotmail.com','F','1999-03-29','2026-02-12 18:59:19','05324560030','05414560030');
+
+
+-- 2) COUNTRIES
 
 CREATE TABLE COUNTRIES (
   ID       TINYINT AUTO_INCREMENT PRIMARY KEY,
   COUNTRY  VARCHAR(50) NOT NULL
 );
 
+INSERT INTO COUNTRIES (COUNTRY) VALUES
+('Türkiye'),('Almanya'),('Fransa'),('İsviçre'),('Hollanda'),('Bulgaristan');
+
+
+-- 3) CITIES (FK -> COUNTRIES)
+
 CREATE TABLE CITIES (
   ID         SMALLINT AUTO_INCREMENT PRIMARY KEY,
-  COUNTRYID  TINYINT,
+  COUNTRYID  TINYINT NOT NULL,
   CITY       VARCHAR(50) NOT NULL,
   CONSTRAINT fk_city_country
     FOREIGN KEY (COUNTRYID) REFERENCES COUNTRIES(ID)
     ON DELETE CASCADE
 );
 
+-- 30 şehir, ülkelere yaydıM (ID'ler 1..30 olacak)
+INSERT INTO CITIES (COUNTRYID, CITY) VALUES
+(1,'Ankara'),(1,'Kırıkkale'),(1,'Kırklareli'),(1,'Bursa'),(1,'Çanakkale'),
+(2,'İstanbul'),(2,'Muğla'),(2,'Ağrı'),(2,'Van'),(2,'Bartın'),
+(3,'Bolu'),(3,'Kırşehir'),(3,'Çorum'),(3,'Adana'),(3,'Hatay'),
+(4,'Antalya'),(4,'Bilecik'),(4,'Uşak'),(4,'Rize'),(4,'Yalova'),
+(5,'Kocaeli'),(5,'Batman'),(5,'Aksaray'),(5,'Tokat'),(5,'Hakkari'),
+(6,'Şanlıurfa'),(6,'Elazığ'),(6,'Konya'),(6,'Kastamonu'),(6,'Zonguldak');
+
+
+-- 4) TOWNS (FK -> CITIES)
+
 CREATE TABLE TOWNS (
   ID      INT AUTO_INCREMENT PRIMARY KEY,
-  CITYID  SMALLINT,
-  TOWN    VARCHAR(50),
+  CITYID  SMALLINT NOT NULL,
+  TOWN    VARCHAR(50) NOT NULL,
   CONSTRAINT fk_town_city
     FOREIGN KEY (CITYID) REFERENCES CITIES(ID)
     ON DELETE CASCADE
 );
 
+INSERT INTO TOWNS (CITYID, TOWN) VALUES
+(1,'Çankaya'), (2,'Yahşihan'), (3,'Lüleburgaz'), (4,'Nilüfer'), (5,'Merkez'),
+(6,'Kadıköy'), (7,'Bodrum'), (8,'Doğubayazıt'), (9,'Erciş'), (10,'Amasra'),
+(11,'Gerede'), (12,'Mucur'), (13,'Osmancık'), (14,'Seyhan'), (15,'İskenderun'),
+(16,'Alanya'), (17,'Bozüyük'), (18,'Banaz'), (19,'Çayeli'), (20,'Çınarcık'),
+(21,'Gebze'), (22,'Kozluk'), (23,'Ortaköy'), (24,'Turhal'), (25,'Yüksekova'),
+(26,'Viranşehir'), (27,'Merkez'), (28,'Selçuklu'), (29,'Tosya'), (30,'Ereğli');
+
+
+-- 5) DISTRICTS (FK -> TOWNS)
+
 CREATE TABLE DISTRICTS (
-  ID      INT AUTO_INCREMENT PRIMARY KEY,
-  TOWNID  INT,
-  DISTRICT VARCHAR(50),
+  ID        INT AUTO_INCREMENT PRIMARY KEY,
+  TOWNID    INT NOT NULL,
+  DISTRICT  VARCHAR(50) NOT NULL,
   CONSTRAINT fk_district_town
     FOREIGN KEY (TOWNID) REFERENCES TOWNS(ID)
     ON DELETE CASCADE
 );
 
+INSERT INTO DISTRICTS (TOWNID, DISTRICT) VALUES
+(1,'District01'),(2,'District02'),(3,'District03'),(4,'District04'),(5,'District05'),
+(6,'District06'),(7,'District07'),(8,'District08'),(9,'District09'),(10,'District10'),
+(11,'District11'),(12,'District12'),(13,'District13'),(14,'District14'),(15,'District15'),
+(16,'District16'),(17,'District17'),(18,'District18'),(19,'District19'),(20,'District20'),
+(21,'District21'),(22,'District22'),(23,'District23'),(24,'District24'),(25,'District25'),
+(26,'District26'),(27,'District27'),(28,'District28'),(29,'District29'),(30,'District30');
+
+
+-- 6) ADDRESS (FK -> USERS/COUNTRIES/CITIES/TOWNS/DISTRICTS)
 
 CREATE TABLE ADDRESS (
   ID          INT AUTO_INCREMENT PRIMARY KEY,
-  USERID      INT,
-  COUNTRYID   TINYINT,
-  CITYID      SMALLINT,
-  TOWNID      INT,
-  DISTRICTID  INT,
+  USERID      INT NOT NULL,
+  COUNTRYID   TINYINT NOT NULL,
+  CITYID      SMALLINT NOT NULL,
+  TOWNID      INT NOT NULL,
+  DISTRICTID  INT NOT NULL,
   POSTALCODE  VARCHAR(10),
   ADDRESSTEXT VARCHAR(500),
 
-  CONSTRAINT fk_address_user
-    FOREIGN KEY (USERID) REFERENCES USERS(ID),
-
-  CONSTRAINT fk_address_country
-    FOREIGN KEY (COUNTRYID) REFERENCES COUNTRIES(ID),
-
-  CONSTRAINT fk_address_city
-    FOREIGN KEY (CITYID) REFERENCES CITIES(ID),
-
-  CONSTRAINT fk_address_town
-    FOREIGN KEY (TOWNID) REFERENCES TOWNS(ID),
-
-  CONSTRAINT fk_address_district
-    FOREIGN KEY (DISTRICTID) REFERENCES DISTRICTS(ID)
+  CONSTRAINT fk_address_user     FOREIGN KEY (USERID)     REFERENCES USERS(ID),
+  CONSTRAINT fk_address_country  FOREIGN KEY (COUNTRYID)  REFERENCES COUNTRIES(ID),
+  CONSTRAINT fk_address_city     FOREIGN KEY (CITYID)     REFERENCES CITIES(ID),
+  CONSTRAINT fk_address_town     FOREIGN KEY (TOWNID)     REFERENCES TOWNS(ID),
+  CONSTRAINT fk_address_district FOREIGN KEY (DISTRICTID) REFERENCES DISTRICTS(ID)
 );
 
+-- 30 adres: user 1..30 ile birebir
+INSERT INTO ADDRESS (USERID, COUNTRYID, CITYID, TOWNID, DISTRICTID, POSTALCODE, ADDRESSTEXT) VALUES
+(1,1,1,1,1,'10001','Address text 01'),
+(2,1,2,2,2,'10002','Address text 02'),
+(3,1,3,3,3,'10003','Address text 03'),
+(4,1,4,4,4,'10004','Address text 04'),
+(5,1,5,5,5,'10005','Address text 05'),
+(6,2,6,6,6,'10006','Address text 06'),
+(7,2,7,7,7,'10007','Address text 07'),
+(8,2,8,8,8,'10008','Address text 08'),
+(9,2,9,9,9,'10009','Address text 09'),
+(10,2,10,10,10,'10010','Address text 10'),
+(11,3,11,11,11,'10011','Address text 11'),
+(12,3,12,12,12,'10012','Address text 12'),
+(13,3,13,13,13,'10013','Address text 13'),
+(14,3,14,14,14,'10014','Address text 14'),
+(15,3,15,15,15,'10015','Address text 15'),
+(16,4,16,16,16,'10016','Address text 16'),
+(17,4,17,17,17,'10017','Address text 17'),
+(18,4,18,18,18,'10018','Address text 18'),
+(19,4,19,19,19,'10019','Address text 19'),
+(20,4,20,20,20,'10020','Address text 20'),
+(21,5,21,21,21,'10021','Address text 21'),
+(22,5,22,22,22,'10022','Address text 22'),
+(23,5,23,23,23,'10023','Address text 23'),
+(24,5,24,24,24,'10024','Address text 24'),
+(25,5,25,25,25,'10025','Address text 25'),
+(26,6,26,26,26,'10026','Address text 26'),
+(27,6,27,27,27,'10027','Address text 27'),
+(28,6,28,28,28,'10028','Address text 28'),
+(29,6,29,29,29,'10029','Address text 29'),
+(30,6,30,30,30,'10030','Address text 30');
+
+
+-- 7) ITEMS
 
 CREATE TABLE ITEMS (
   ID        INT AUTO_INCREMENT PRIMARY KEY,
   ITEMCODE  VARCHAR(50),
   ITEMNAME  VARCHAR(100),
-  UNITPRICE FLOAT,
+  UNITPRICE DECIMAL(10,2),
   CATEGORY1 VARCHAR(50),
   CATEGORY2 VARCHAR(50),
   CATEGORY3 VARCHAR(50),
@@ -89,76 +189,196 @@ CREATE TABLE ITEMS (
   BRAND     VARCHAR(50)
 );
 
+INSERT INTO ITEMS (ITEMCODE, ITEMNAME, UNITPRICE, CATEGORY1, CATEGORY2, CATEGORY3, CATEGORY4, BRAND) VALUES
+('P001','Item01',100,'CatA','CatB',NULL,NULL,'BrandA'),
+('P002','Item02',150,'CatA','CatB',NULL,NULL,'BrandA'),
+('P003','Item03',200,'CatA','CatB',NULL,NULL,'BrandA'),
+('P004','Item04',250,'CatA','CatB',NULL,NULL,'BrandA'),
+('P005','Item05',300,'CatA','CatB',NULL,NULL,'BrandA'),
+('P006','Item06',350,'CatA','CatB',NULL,NULL,'BrandA'),
+('P007','Item07',400,'CatA','CatB',NULL,NULL,'BrandA'),
+('P008','Item08',450,'CatA','CatB',NULL,NULL,'BrandA'),
+('P009','Item09',500,'CatA','CatB',NULL,NULL,'BrandA'),
+('P010','Item10',550,'CatA','CatB',NULL,NULL,'BrandA'),
+('P011','Item11',600,'CatA','CatB',NULL,NULL,'BrandB'),
+('P012','Item12',650,'CatA','CatB',NULL,NULL,'BrandB'),
+('P013','Item13',700,'CatA','CatB',NULL,NULL,'BrandB'),
+('P014','Item14',750,'CatA','CatB',NULL,NULL,'BrandB'),
+('P015','Item15',800,'CatA','CatB',NULL,NULL,'BrandB'),
+('P016','Item16',850,'CatA','CatB',NULL,NULL,'BrandB'),
+('P017','Item17',900,'CatA','CatB',NULL,NULL,'BrandB'),
+('P018','Item18',950,'CatA','CatB',NULL,NULL,'BrandB'),
+('P019','Item19',1000,'CatA','CatB',NULL,NULL,'BrandB'),
+('P020','Item20',1050,'CatA','CatB',NULL,NULL,'BrandB'),
+('P021','Item21',1100,'CatA','CatB',NULL,NULL,'BrandC'),
+('P022','Item22',1150,'CatA','CatB',NULL,NULL,'BrandC'),
+('P023','Item23',1200,'CatA','CatB',NULL,NULL,'BrandC'),
+('P024','Item24',1250,'CatA','CatB',NULL,NULL,'BrandC'),
+('P025','Item25',1300,'CatA','CatB',NULL,NULL,'BrandC'),
+('P026','Item26',1350,'CatA','CatB',NULL,NULL,'BrandC'),
+('P027','Item27',1400,'CatA','CatB',NULL,NULL,'BrandC'),
+('P028','Item28',1450,'CatA','CatB',NULL,NULL,'BrandC'),
+('P029','Item29',1500,'CatA','CatB',NULL,NULL,'BrandC'),
+('P030','Item30',1550,'CatA','CatB',NULL,NULL,'BrandC');
+
+
+-- 8) ORDERS (FK -> USERS/ADDRESS)
 
 CREATE TABLE ORDERS (
   ID         INT AUTO_INCREMENT PRIMARY KEY,
-  USERID     INT,
-  DATE_      DATETIME,
-  TOTALPRICE FLOAT,
-  STATUS_    TINYINT,
-  ADDRESSID  INT,
+  USERID     INT NOT NULL,
+  DATE_      DATETIME NOT NULL,
+  TOTALPRICE DECIMAL(10,2) NOT NULL,
+  STATUS_    TINYINT NOT NULL,
+  ADDRESSID  INT NOT NULL,
 
-  CONSTRAINT fk_order_user
-    FOREIGN KEY (USERID) REFERENCES USERS(ID),
-
-  CONSTRAINT fk_order_address
-    FOREIGN KEY (ADDRESSID) REFERENCES ADDRESS(ID)
+  CONSTRAINT fk_order_user    FOREIGN KEY (USERID)    REFERENCES USERS(ID),
+  CONSTRAINT fk_order_address FOREIGN KEY (ADDRESSID) REFERENCES ADDRESS(ID)
 );
 
+INSERT INTO ORDERS (USERID, DATE_, TOTALPRICE, STATUS_, ADDRESSID) VALUES
+(1,'2026-02-12 10:15:00',100,1,1),
+(2,'2025-07-18 11:20:00',150,1,2),
+(3,'2024-03-05 12:25:00',200,1,3),
+(4,'2023-09-14 13:30:00',250,1,4),
+(5,'2022-01-22 14:35:00',300,1,5),
+(6,'2021-11-07 15:40:00',350,1,6),
+(7,'2020-06-19 16:45:00',400,1,7),
+(8,'2019-04-03 17:50:00',450,1,8),
+(9,'2018-08-27 18:55:00',500,1,9),
+(10,'2017-12-30 09:10:00',550,1,10),
+(11,'2016-05-12 10:12:00',600,1,11),
+(12,'2025-02-01 11:14:00',650,1,12),
+(13,'2024-10-25 12:16:00',700,1,13),
+(14,'2023-03-09 13:18:00',750,1,14),
+(15,'2022-07-01 14:20:00',800,1,15),
+(16,'2021-01-18 15:22:00',850,1,16),
+(17,'2020-09-07 16:24:00',900,1,17),
+(18,'2019-02-26 17:26:00',950,1,18),
+(19,'2018-11-15 18:28:00',1000,1,19),
+(20,'2017-06-05 09:30:00',1050,1,20),
+(21,'2016-03-23 10:32:00',1100,1,21),
+(22,'2025-12-11 11:34:00',1150,1,22),
+(23,'2024-06-30 12:36:00',1200,1,23),
+(24,'2023-10-04 13:38:00',1250,1,24),
+(25,'2022-04-19 14:40:00',1300,1,25);
+
+
+-- 9) ORDERDETAILS (FK -> ORDERS/ITEMS)
 
 CREATE TABLE ORDERDETAILS (
   ID        INT AUTO_INCREMENT PRIMARY KEY,
-  ORDERID   INT,
-  ITEMID    INT,
-  AMOUNT    INT,
-  UNITPRICE FLOAT,
-  LINETOTAL FLOAT,
+  ORDERID   INT NOT NULL,
+  ITEMID    INT NOT NULL,
+  AMOUNT    INT NOT NULL,
+  UNITPRICE DECIMAL(10,2) NOT NULL,
+  LINETOTAL DECIMAL(10,2) NOT NULL,
 
-  CONSTRAINT fk_orderdetail_order
-    FOREIGN KEY (ORDERID) REFERENCES ORDERS(ID),
-
-  CONSTRAINT fk_orderdetail_item
-    FOREIGN KEY (ITEMID) REFERENCES ITEMS(ID)
+  CONSTRAINT fk_orderdetail_order FOREIGN KEY (ORDERID) REFERENCES ORDERS(ID),
+  CONSTRAINT fk_orderdetail_item  FOREIGN KEY (ITEMID)  REFERENCES ITEMS(ID)
 );
 
+INSERT INTO ORDERDETAILS (ORDERID, ITEMID, AMOUNT, UNITPRICE, LINETOTAL) VALUES
+(1,1,1,100,100),(2,2,1,150,150),(3,3,1,200,200),(4,4,1,250,250),(5,5,1,300,300),
+(6,6,1,350,350),(7,7,1,400,400),(8,8,1,450,450),(9,9,1,500,500),(10,10,1,550,550),
+(11,11,1,600,600),(12,12,1,650,650),(13,13,1,700,700),(14,14,1,750,750),(15,15,1,800,800),
+(16,16,1,850,850),(17,17,1,900,900),(18,18,1,950,950),(19,19,1,1000,1000),(20,20,1,1050,1050),
+(21,21,1,1100,1100),(22,22,1,1150,1150),(23,23,1,1200,1200),(24,24,1,1250,1250),(25,25,1,1300,1300);
+
+
+-- 10) PAYMENTS (FK -> ORDERS)
 
 CREATE TABLE PAYMENTS (
   ID           INT AUTO_INCREMENT PRIMARY KEY,
-  ORDERID      INT,
-  PAYMENTTYPE  TINYINT,
-  DATE_        DATETIME,
-  ISOK         BIT,
+  ORDERID      INT NOT NULL,
+  PAYMENTTYPE  TINYINT NOT NULL,
+  DATE_        DATETIME NOT NULL,
+  ISOK         BIT NOT NULL,
   APPROVECODE  VARCHAR(100),
-  PAYMENTTOTAL FLOAT,
+  PAYMENTTOTAL DECIMAL(10,2) NOT NULL,
 
-  CONSTRAINT fk_payment_order
-    FOREIGN KEY (ORDERID) REFERENCES ORDERS(ID)
+  CONSTRAINT fk_payment_order FOREIGN KEY (ORDERID) REFERENCES ORDERS(ID)
 );
 
+INSERT INTO PAYMENTS (ORDERID, PAYMENTTYPE, DATE_, ISOK, APPROVECODE, PAYMENTTOTAL) VALUES
+(1,1,'2026-02-12 10:15:00',1,'APP-0001',100),
+(2,1,'2025-07-18 11:20:00',1,'APP-0002',150),
+(3,1,'2024-03-05 12:25:00',1,'APP-0003',200),
+(4,1,'2023-09-14 13:30:00',1,'APP-0004',250),
+(5,1,'2022-01-22 14:35:00',1,'APP-0005',300),
+(6,1,'2021-11-07 15:40:00',1,'APP-0006',350),
+(7,1,'2020-06-19 16:45:00',1,'APP-0007',400),
+(8,1,'2019-04-03 17:50:00',1,'APP-0008',450),
+(9,1,'2018-08-27 18:55:00',1,'APP-0009',500),
+(10,1,'2017-12-30 09:10:00',1,'APP-0010',550),
+(11,1,'2026-01-12 10:12:00',1,'APP-0011',600),
+(12,1,'2025-02-01 11:14:00',1,'APP-0012',650),
+(13,1,'2024-10-25 12:16:00',1,'APP-0013',700),
+(14,1,'2023-03-09 13:18:00',1,'APP-0014',750),
+(15,1,'2022-07-01 14:20:00',1,'APP-0015',800),
+(16,1,'2021-01-18 15:22:00',1,'APP-0016',850),
+(17,1,'2020-09-07 16:24:00',1,'APP-0017',900),
+(18,1,'2019-02-26 17:26:00',1,'APP-0018',950),
+(19,1,'2018-11-15 18:28:00',1,'APP-0019',1000),
+(20,1,'2017-06-05 09:30:00',1,'APP-0020',1050),
+(21,1,'2026-02-05 10:32:00',1,'APP-0021',1100),
+(22,1,'2025-12-11 11:34:00',1,'APP-0022',1150),
+(23,1,'2024-06-30 12:36:00',1,'APP-0023',1200),
+(24,1,'2023-10-04 13:38:00',1,'APP-0024',1250),
+(25,1,'2022-04-19 14:40:00',1,'APP-0025',1300);
+
+
+-- 11) INVOICES (FK -> ORDERS/ADDRESS)
 
 CREATE TABLE INVOICES (
-  ID          INT AUTO_INCREMENT PRIMARY KEY,
-  ORDERID     INT,
-  DATE_       DATETIME,
-  ADDRESSID   INT,
+  ID           INT AUTO_INCREMENT PRIMARY KEY,
+  ORDERID      INT NOT NULL,
+  DATE_        DATETIME NOT NULL,
+  ADDRESSID    INT NOT NULL,
   CARGOFICHENO VARCHAR(20),
-  TOTALPRICE  FLOAT,
+  TOTALPRICE   DECIMAL(10,2) NOT NULL,
 
-  CONSTRAINT fk_invoices_order
-    FOREIGN KEY (ORDERID) REFERENCES ORDERS(ID),
-
-  CONSTRAINT fk_invoices_address
-    FOREIGN KEY (ADDRESSID) REFERENCES ADDRESS(ID)
+  CONSTRAINT fk_invoices_order   FOREIGN KEY (ORDERID)  REFERENCES ORDERS(ID),
+  CONSTRAINT fk_invoices_address FOREIGN KEY (ADDRESSID) REFERENCES ADDRESS(ID)
 );
 
+INSERT INTO INVOICES (ORDERID, DATE_, ADDRESSID, CARGOFICHENO, TOTALPRICE) VALUES
+(1,'2026-02-12 10:15:00',1,'CRG-0001',100),
+(2,'2025-07-18 11:20:00',2,'CRG-0002',150),
+(3,'2024-03-05 12:25:00',3,'CRG-0003',200),
+(4,'2023-09-14 13:30:00',4,'CRG-0004',250),
+(5,'2022-01-22 14:35:00',5,'CRG-0005',300),
+(6,'2021-11-07 15:40:00',6,'CRG-0006',350),
+(7,'2020-06-19 16:45:00',7,'CRG-0007',400),
+(8,'2019-04-03 17:50:00',8,'CRG-0008',450),
+(9,'2018-08-27 18:55:00',9,'CRG-0009',500),
+(10,'2017-12-30 09:10:00',10,'CRG-0010',550),
+(11,'2026-01-12 10:12:00',11,'CRG-0011',600),
+(12,'2025-02-01 11:14:00',12,'CRG-0012',650),
+(13,'2024-10-25 12:16:00',13,'CRG-0013',700),
+(14,'2023-03-09 13:18:00',14,'CRG-0014',750),
+(15,'2022-07-01 14:20:00',15,'CRG-0015',800),
+(16,'2021-01-18 15:22:00',16,'CRG-0016',850),
+(17,'2020-09-07 16:24:00',17,'CRG-0017',900),
+(18,'2019-02-26 17:26:00',18,'CRG-0018',950),
+(19,'2018-11-15 18:28:00',19,'CRG-0019',1000),
+(20,'2017-06-05 09:30:00',20,'CRG-0020',1050),
+(21,'2026-02-05 10:32:00',21,'CRG-0021',1100),
+(22,'2025-12-11 11:34:00',22,'CRG-0022',1150),
+(23,'2024-06-30 12:36:00',23,'CRG-0023',1200),
+(24,'2023-10-04 13:38:00',24,'CRG-0024',1250),
+(25,'2022-04-19 14:40:00',25,'CRG-0025',1300);
+
+
+-- 12) INVOICEDETAILS (FK -> INVOICES/ORDERDETAILS/ITEMS)
 
 CREATE TABLE INVOICEDETAILS (
   ID            INT AUTO_INCREMENT PRIMARY KEY,
-  INVOICEID     INT,
-  ORDERDETAILID INT,
-  ITEMID        INT,
-  AMOUNT        INT,
-  UNITPRICE     FLOAT,
+  INVOICEID     INT NOT NULL,
+  ORDERDETAILID INT NOT NULL,
+  ITEMID        INT NOT NULL,
+  AMOUNT        INT NOT NULL,
+  UNITPRICE     DECIMAL(10,2) NOT NULL,
 
   CONSTRAINT fk_invoicedetail_invoice
     FOREIGN KEY (INVOICEID) REFERENCES INVOICES(ID),
@@ -169,3 +389,12 @@ CREATE TABLE INVOICEDETAILS (
   CONSTRAINT fk_invoicedetail_item
     FOREIGN KEY (ITEMID) REFERENCES ITEMS(ID)
 );
+
+INSERT INTO INVOICEDETAILS (INVOICEID, ORDERDETAILID, ITEMID, AMOUNT, UNITPRICE) VALUES
+(1,1,1,1,100),(2,2,2,1,150),(3,3,3,1,200),(4,4,4,1,250),(5,5,5,1,300),
+(6,6,6,1,350),(7,7,7,1,400),(8,8,8,1,450),(9,9,9,1,500),(10,10,10,1,550),
+(11,11,11,1,600),(12,12,12,1,650),(13,13,13,1,700),(14,14,14,1,750),(15,15,15,1,800),
+(16,16,16,1,850),(17,17,17,1,900),(18,18,18,1,950),(19,19,19,1,1000),(20,20,20,1,1050),
+(21,21,21,1,1100),(22,22,22,1,1150),(23,23,23,1,1200),(24,24,24,1,1250),(25,25,25,1,1300);
+
+
